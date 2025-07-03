@@ -6,13 +6,19 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext.jsx';
 import AuthModal from './AuthModal.jsx';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const Navbar = () => {
   const { user, logout } = useAuth();
+  const navigate = useNavigate();
   const location = useLocation();
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
 
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
@@ -75,39 +81,60 @@ const Navbar = () => {
                     <span>{user.coins?.toLocaleString() || 0}</span>
                   </div>
 
-                  <div className="relative group">
-                    <button className="flex items-center space-x-2 text-gray-700 hover:text-black">
-                      <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-purple-500 rounded-full flex items-center justify-center shadow-md">
-                        <User className="h-4 w-4 text-white" />
-                      </div>
-                      <span className="hidden sm:block font-medium">{user.username}</span>
-                    </button>
-                    <div className="absolute right-0 mt-2 w-48 bg-white backdrop-blur-md rounded-md shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
-                      <div className="py-1 text-gray-800">
-                        <Link to="/profile" className="flex items-center px-4 py-2 text-sm hover:bg-gray-100">
-                          <User className="h-4 w-4 mr-2" /> Profile
-                        </Link>
-                        {user.isAdmin && (
-                          <Link to="/admin" className="flex items-center px-4 py-2 text-sm hover:bg-gray-100">
-                            <Settings className="h-4 w-4 mr-2" /> Admin Panel
-                          </Link>
-                        )}
-                        <button
-                          onClick={logout}
-                          className="flex items-center w-full text-left px-4 py-2 text-sm hover:bg-gray-100"
-                        >
-                          <LogOut className="h-4 w-4 mr-2" /> Logout
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                  <div className="relative">
+  <button
+    onClick={() => setIsDropdownOpen(prev => !prev)}
+    className="flex items-center space-x-2 text-gray-700 hover:text-black"
+  >
+    <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-purple-500 rounded-full flex items-center justify-center shadow-md">
+      <User className="h-4 w-4 text-white" />
+    </div>
+    <span className="hidden sm:block font-medium">{user.username}</span>
+  </button>
+
+  {isDropdownOpen && (
+    <div className="absolute right-0 mt-2 w-48 bg-white backdrop-blur-md rounded-md shadow-xl border border-gray-200 z-20">
+      <div className="py-1 text-gray-800">
+        <Link
+          to="/profile"
+          className="flex items-center px-4 py-2 text-sm hover:bg-gray-100"
+          onClick={() => setIsDropdownOpen(false)}
+        >
+          <User className="h-4 w-4 mr-2" /> Profile
+        </Link>
+        {user.isAdmin && (
+          <Link
+            to="/admin"
+            className="flex items-center px-4 py-2 text-sm hover:bg-gray-100"
+            onClick={() => setIsDropdownOpen(false)}
+          >
+            <Settings className="h-4 w-4 mr-2" /> Admin Panel
+          </Link>
+        )}
+        <button
+          onClick={() => {
+           logout();
+setIsDropdownOpen(false);
+
+navigate('/'); // 👈 redirect to home
+
+          }}
+          className="flex items-center w-full text-left px-4 py-2 text-sm hover:bg-gray-100"
+        >
+          <LogOut className="h-4 w-4 mr-2" /> Logout
+        </button>
+      </div>
+    </div>
+  )}
+</div>
+
                 </>
               ) : (
                 <button
                   onClick={() => setShowAuthModal(true)}
                   className="bg-gradient-to-r from-purple-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-md"
                 >
-                  Login / Register
+                  Login
                 </button>
               )}
               <button
@@ -120,29 +147,30 @@ const Navbar = () => {
           </div>
 
           {isMobileMenuOpen && (
-            <div className="md:hidden border-t border-gray-200 bg-white">
-              <div className="px-4 pt-3 pb-4 space-y-1">
-                {navigation.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <Link
-                      key={item.name}
-                      to={item.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={`flex items-center space-x-2 px-4 py-2 rounded-md text-base font-medium transition-all ${
-                        isActive(item.href)
-                          ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white shadow'
-                          : 'text-gray-800 hover:bg-gray-100 hover:text-black'
-                      }`}
-                    >
-                      <Icon className="h-5 w-5" />
-                      <span>{item.name}</span>
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-          )}
+  <div className="md:hidden border-t border-gray-200 bg-white">
+    <div className="px-4 pt-3 pb-4 space-y-2">
+      {navigation.map((item) => {
+        const Icon = item.icon;
+        return (
+          <Link
+            key={item.name}
+            to={item.href}
+            onClick={() => setIsMobileMenuOpen(false)}
+            className={`flex items-center w-full space-x-3 px-4 py-3 rounded-lg text-base font-medium transition-all ${
+              isActive(item.href)
+                ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white shadow-md'
+                : 'text-gray-800 hover:bg-gray-100 hover:text-black'
+            }`}
+          >
+            <Icon className="h-5 w-5" />
+            <span className="flex-1">{item.name}</span>
+          </Link>
+        );
+      })}
+    </div>
+  </div>
+)}
+
         </div>
       </nav>
 
