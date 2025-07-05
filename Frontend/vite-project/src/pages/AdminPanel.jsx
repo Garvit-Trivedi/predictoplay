@@ -13,7 +13,7 @@ const AdminPanel = () => {
   });
 
   const handleCreatePrediction = () => {
-    // Handle create prediction logic
+    
     console.log('Creating prediction:', newPrediction);
     setShowCreateModal(false);
     setNewPrediction({
@@ -25,19 +25,19 @@ const AdminPanel = () => {
   };
 
   const handleResolvePrediction = (id, result) => {
-    // Handle resolve prediction logic
+
     console.log(`Resolving prediction ${id} with result: ${result}`);
   };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Header */}
+     
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Admin Panel</h1>
         <p className="text-gray-600">Manage predictions, users, and platform settings</p>
       </div>
 
-      {/* Stats Cards */}
+    
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
         <div className="bg-white rounded-xl shadow-lg p-6">
           <div className="flex items-center space-x-3">
@@ -88,7 +88,7 @@ const AdminPanel = () => {
         </div>
       </div>
 
-      {/* Tabs */}
+     
       <div className="bg-white rounded-2xl shadow-lg">
         <div className="border-b border-gray-200">
           <nav className="flex space-x-8 px-6">
@@ -255,7 +255,7 @@ const AdminPanel = () => {
         </div>
       </div>
 
-      {/* Create Prediction Modal */}
+    
       {showCreateModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-2xl max-w-md w-full p-6">

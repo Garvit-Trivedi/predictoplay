@@ -15,7 +15,7 @@ const Wallet = () => {
 
   const claimDailyBonus = () => {
     updateCoins(50);
-    // Add bonus validation logic here if needed
+   
   };
 
   const formatTimeAgo = (dateString) => {
@@ -36,13 +36,13 @@ const Wallet = () => {
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      {/* Header */}
+      
       <div className="mb-10">
         <h1 className="text-4xl font-extrabold text-gray-900 mb-2">My Wallet</h1>
         <p className="text-gray-500">Manage your coins and check all your prediction transactions.</p>
       </div>
 
-      {/* Balance Card */}
+     
       <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white rounded-2xl p-8 shadow-xl mb-10">
         <div className="flex justify-between items-center">
           <div>
@@ -62,9 +62,9 @@ const Wallet = () => {
         </div>
       </div>
 
-      {/* Quick Actions */}
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10">
-        {/* Daily Bonus */}
+        
         <button
           onClick={claimDailyBonus}
           className="group bg-gradient-to-br from-green-400 to-blue-500 text-white p-6 rounded-xl hover:scale-105 transform transition duration-200 shadow-md"
@@ -78,7 +78,7 @@ const Wallet = () => {
           </div>
         </button>
 
-        {/* Add Coins */}
+       
         <button
           onClick={() => setShowAddCoins(true)}
           className="group bg-gradient-to-br from-purple-500 to-pink-500 text-white p-6 rounded-xl hover:scale-105 transform transition duration-200 shadow-md"
@@ -92,7 +92,7 @@ const Wallet = () => {
           </div>
         </button>
 
-        {/* Win Rate */}
+        
         <div className="bg-gradient-to-br from-yellow-400 to-orange-500 text-white p-6 rounded-xl shadow-md">
           <div className="flex items-center space-x-4">
             <TrendingUp className="h-8 w-8" />
@@ -104,7 +104,7 @@ const Wallet = () => {
         </div>
       </div>
 
-      {/* Transaction History */}
+     
       <div className="bg-white rounded-2xl shadow-md overflow-hidden">
         <div className="p-6 border-b border-gray-200">
           <h2 className="text-2xl font-bold text-gray-800">Transaction History</h2>
@@ -129,7 +129,6 @@ const Wallet = () => {
         </div>
       </div>
 
-      {/* Add Coins Modal */}
       {showAddCoins && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-40 flex items-center justify-center px-4">
           <div className="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl">

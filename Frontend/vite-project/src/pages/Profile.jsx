@@ -60,7 +60,7 @@ const Profile = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Profile Header */}
+      
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white mb-8">
         <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
           <div className="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
@@ -87,7 +87,7 @@ const Profile = () => {
         </div>
       </div>
 
-      {/* Stats Grid */}
+      
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
         <div className="bg-white rounded-xl shadow-lg p-6 text-center">
           <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -122,7 +122,7 @@ const Profile = () => {
         </div>
       </div>
 
-      {/* Tabs */}
+      
       <div className="bg-white rounded-2xl shadow-lg">
         <div className="border-b border-gray-200">
           <nav className="flex space-x-8 px-6">

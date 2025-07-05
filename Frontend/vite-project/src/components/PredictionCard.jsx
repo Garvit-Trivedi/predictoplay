@@ -64,7 +64,7 @@ const PredictionCard = ({ prediction }) => {
     <>
       <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
         <div className="p-6">
-          {/* Header */}
+         
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-2">
               <span className="text-2xl">{getCategoryIcon(prediction.category)}</span>
@@ -78,12 +78,11 @@ const PredictionCard = ({ prediction }) => {
             </div>
           </div>
 
-          {/* Question */}
           <h3 className="text-lg font-semibold text-gray-900 mb-4 line-clamp-2">
             {prediction.question}
           </h3>
 
-          {/* Stats */}
+         
           <div className="flex items-center space-x-4 mb-4 text-sm text-gray-600">
             <div className="flex items-center space-x-1">
               <Users className="h-4 w-4" />
@@ -95,7 +94,6 @@ const PredictionCard = ({ prediction }) => {
             </div>
           </div>
 
-          {/* Voting Bars */}
           <div className="space-y-3 mb-6">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-700">YES</span>
@@ -120,7 +118,7 @@ const PredictionCard = ({ prediction }) => {
             </div>
           </div>
 
-          {/* Action Buttons */}
+          
           <div className="flex space-x-3">
             <button
               onClick={() => setShowPlayModal(true)}
@@ -133,7 +131,7 @@ const PredictionCard = ({ prediction }) => {
         </div>
       </div>
 
-      {/* Play Modal */}
+      
       {showPlayModal && (
         <PlayModal
           prediction={prediction}

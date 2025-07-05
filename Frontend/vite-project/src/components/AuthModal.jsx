@@ -17,7 +17,7 @@ const AuthModal = ({ onClose }) => {
     e.preventDefault();
     
     if (isLogin) {
-      // Mock login
+
       login({
         username: formData.username || 'Player',
         email: formData.email,
@@ -26,7 +26,7 @@ const AuthModal = ({ onClose }) => {
         isAdmin: formData.email === 'admin@predictoplay.com'
       });
     } else {
-      // Mock register
+      
       register({
         username: formData.username,
         email: formData.email,
@@ -183,7 +183,7 @@ const AuthModal = ({ onClose }) => {
           </p>
         </div>
 
-        {/* Demo Account Info */}
+        
         <div className="mt-4 p-3 bg-blue-50 rounded-lg">
           <p className="text-xs text-blue-700">
             <strong>Demo:</strong> Use admin@predictoplay.com for admin access

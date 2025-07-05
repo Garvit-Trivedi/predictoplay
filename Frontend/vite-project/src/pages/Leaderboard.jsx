@@ -21,13 +21,13 @@ const Leaderboard = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Header */}
+      
       <div className="text-center mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Leaderboard</h1>
         <p className="text-gray-600">Top predictors and their amazing performances</p>
       </div>
 
-      {/* Time Filter */}
+     
       <div className="flex justify-center mb-8">
         <div className="flex bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
           {['weekly', 'monthly', 'all-time'].map(filter => (
@@ -46,7 +46,7 @@ const Leaderboard = () => {
         </div>
       </div>
 
-      {/* Top 3 Podium */}
+     
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         {mockLeaderboard.slice(0, 3).map((user, index) => (
           <div key={user.id} className={`relative ${index === 0 ? 'md:order-2' : index === 1 ? 'md:order-1' : 'md:order-3'}`}>
@@ -73,7 +73,7 @@ const Leaderboard = () => {
         ))}
       </div>
 
-      {/* Full Leaderboard */}
+   
       <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
         <div className="p-6 border-b border-gray-200">
           <h2 className="text-xl font-bold text-gray-900">Complete Rankings</h2>
@@ -148,7 +148,6 @@ const Leaderboard = () => {
         </div>
       </div>
 
-      {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
         <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white p-6 rounded-xl">
           <div className="flex items-center space-x-3">

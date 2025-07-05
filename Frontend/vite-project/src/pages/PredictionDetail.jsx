@@ -28,7 +28,7 @@ const PredictionDetail = () => {
 
   return (
     <div className="min-h-screen bg-gray-950 text-gray-300">
-      {/* Header Section */}
+      
       <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-12">
         <div className="absolute inset-0 bg-[url('https://via.placeholder.com/1920x200?text=Background+Pattern')] bg-cover bg-center opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,7 +69,7 @@ const PredictionDetail = () => {
         </div>
       </div>
 
-      {/* Prediction Card Section */}
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="max-w-lg mx-auto">
           <h2 className="text-2xl font-bold text-white mb-6 animate-fade-in">Make Your Prediction</h2>
@@ -77,7 +77,7 @@ const PredictionDetail = () => {
         </div>
       </div>
 
-      {/* Additional Stats Section */}
+    
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <h2 className="text-2xl font-bold text-white mb-6 animate-fade-in">Prediction Stats</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -110,7 +110,7 @@ const PredictionDetail = () => {
   );
 };
 
-// Reusable Stat Card
+
 const StatCard = ({ icon, label, value }) => (
   <div className="bg-gray-900/80 backdrop-blur-md rounded-xl border border-gray-700/50 p-6 shadow-lg hover:shadow-purple-600/50 transition-all duration-300">
     <div className="flex items-center space-x-4">

@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Check if user is logged in from localStorage
+   
     const savedUser = localStorage.getItem('predictoplay_user');
     if (savedUser) {
       setUser(JSON.parse(savedUser));
@@ -36,7 +36,7 @@ export const AuthProvider = ({ children }) => {
   const register = (userData) => {
     const newUser = {
       ...userData,
-      coins: 1000, // Starting bonus
+      coins: 1000, 
       id: Date.now(),
       createdAt: new Date().toISOString(),
       isAdmin: false

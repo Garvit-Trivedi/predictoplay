@@ -13,18 +13,18 @@ const PlayModal = ({ prediction, onClose }) => {
 
     setIsPlaying(true);
     
-    // Simulate API call
+ 
     setTimeout(() => {
       updateCoins(-betAmount);
       setIsPlaying(false);
       onClose();
       
-      // Show success message (you can implement toast notification here)
+     
      alert(`Prediction placed! You bet ${betAmount} coins on ${selectedChoice}`);
     }, 1000);
   };
 
-  const potentialWinning = Math.floor(betAmount * 1.8); // 1.8x multiplier
+  const potentialWinning = Math.floor(betAmount * 1.8); 
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
@@ -48,7 +48,7 @@ const PlayModal = ({ prediction, onClose }) => {
           </p>
         </div>
 
-        {/* Your Balance */}
+       
         <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-4 rounded-lg mb-6">
           <div className="flex items-center justify-between">
             <span className="font-medium">Your Balance</span>
@@ -59,7 +59,7 @@ const PlayModal = ({ prediction, onClose }) => {
           </div>
         </div>
 
-        {/* Choice Selection */}
+       
         <div className="mb-6">
           <h3 className="text-sm font-medium text-gray-700 mb-3">Choose Your Prediction</h3>
           <div className="grid grid-cols-2 gap-3">
@@ -94,7 +94,7 @@ const PlayModal = ({ prediction, onClose }) => {
           </div>
         </div>
 
-        {/* Bet Amount */}
+      
         <div className="mb-6">
           <h3 className="text-sm font-medium text-gray-700 mb-3">Bet Amount</h3>
           <div className="relative">
@@ -110,7 +110,7 @@ const PlayModal = ({ prediction, onClose }) => {
             />
           </div>
           
-          {/* Quick Bet Buttons */}
+    
           <div className="flex space-x-2 mt-3">
             {[50, 100, 250, 500].map((amount) => (
               <button
@@ -125,7 +125,7 @@ const PlayModal = ({ prediction, onClose }) => {
           </div>
         </div>
 
-        {/* Potential Winning */}
+        
         <div className="bg-blue-50 p-4 rounded-lg mb-6">
           <div className="flex items-center justify-between">
             <span className="text-sm text-blue-700">Potential Winning</span>
@@ -136,7 +136,7 @@ const PlayModal = ({ prediction, onClose }) => {
           </div>
         </div>
 
-        {/* Warning */}
+    
         {betAmount > user.coins * 0.5 && (
           <div className="flex items-center space-x-2 p-3 bg-yellow-50 rounded-lg mb-4">
             <AlertCircle className="h-5 w-5 text-yellow-600" />
@@ -146,7 +146,7 @@ const PlayModal = ({ prediction, onClose }) => {
           </div>
         )}
 
-        {/* Action Buttons */}
+       
         <div className="flex space-x-3">
           <button
             onClick={onClose}

@@ -28,9 +28,9 @@ const Home = () => {
   return (
     
     <div className="w-full bg-white text-gray-300">
-      {/* Hero Section */}
+     
       <div className="w-full bg-white text-gray-300">
-  {/* Hero Section */}
+  
   <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
     <img
       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwJMpWUVGxQvGzK6KqKGoHSMqu_yETYTmZw&s"
@@ -40,7 +40,7 @@ const Home = () => {
 
     <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col md:flex-row items-center justify-between gap-8">
       
-      {/* Left Text Content */}
+    
       <div className="text-center md:text-left w-full md:w-1/2 z-10">
         <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
          𝒫𝓇𝑒𝒹𝒾𝒸𝓉 𝓉𝒽𝑒 𝐹𝓊𝓉𝓊𝓇𝑒
@@ -49,7 +49,7 @@ const Home = () => {
         <p className="text-xl md:text-2xl mb-8 text-blue-200">
           Join thousands of predictors. Stake your coins. Win big rewards.
         </p>
-        {/* Optional Call-to-Action Buttons */}
+    
         <div className="flex justify-center md:justify-start gap-4">
           <button className="px-6 py-2 border border-yellow-400 bg-yellow text-yellow rounded-lg font-semibold hover:bg-yellow-300  hover:text-black transition">
             Start Predicting
@@ -60,16 +60,15 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Right Side Image with Thought Bubbles */}
       <div className="relative w-full md:w-[420px] h-[420px] md:h-[460px] z-10">
-        {/* Background watercolor style fade */}
+       
         <div
           aria-hidden="true"
           className="absolute right-0 top-0 w-52 h-full bg-gradient-to-b from-red-300 to-transparent opacity-70 rounded-xl"
           style={{ filter: "blur(36px)" }}
         ></div>
 
-        {/* Woman portrait */}
+       
         <img
           src="https://probo.in/_next/image?url=https%3A%2F%2Fd39axbyagw7ipf.cloudfront.net%2Fimages%2Fhome%2Fheader%2Fhome-header-13052025.webp&w=1200&q=75"
           alt="Young Indian woman with a confident pose surrounded by interactive thought bubbles showing questions about cricket and contests"
@@ -77,7 +76,7 @@ const Home = () => {
           onError={(e) => (e.currentTarget.style.display = "none")}
         />
 
-        {/* Thought Bubbles */}
+      
         <div className="absolute top-12 left-2 space-y-4 w-40">
           {[
             "Virat Kohli to score 5 centuries in 2025?",
@@ -102,10 +101,10 @@ const Home = () => {
 </div>
 
 
-      {/* Main Content */}
+      
       <div className="w-100%">
   <section className="bg-white px-6 py-14 md:py-24 max-w-7xl mx-auto flex flex-col md:flex-row gap-12 md:gap-24">
-    {/* Left Text */}
+ 
     <div className="flex-1 max-w-lg">
   <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
     Stay in control —
@@ -116,9 +115,9 @@ const Home = () => {
 </div>
 
 
-    {/* Cards */}
+
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 flex-1">
-      {/* Card 1 */}
+  
       <div className="p-6 border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300 text-sm space-y-3 bg-white">
         <p className="opacity-60 text-xs font-semibold text-gray-600">1977 Traders</p>
         <p className="font-semibold leading-snug text-gray-900 text-base">
@@ -130,7 +129,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Card 2 */}
+    
       <div className="p-6 border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300 text-sm space-y-3 bg-white">
         <p className="opacity-60 text-xs font-semibold text-gray-600">1712 Traders</p>
         <p className="font-semibold leading-snug text-gray-900 text-base">
@@ -142,7 +141,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Card 3 */}
+     
       <div className="p-6 border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300 text-sm space-y-3 bg-white">
         <p className="opacity-60 text-xs font-semibold text-gray-600">1340 Traders</p>
         <p className="font-semibold leading-snug text-gray-900 text-base">
@@ -165,10 +164,10 @@ const Home = () => {
   <div className="w-100% h-1 bg-purple-800 rounded-full"></div>
 </div>
 
-  {/* Masonry Layout */}
+ 
   <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
     
-    {/* What's New (Text Focused) */}
+    
     <div className="break-inside-avoid bg-white p-8 rounded-lg shadow-lg">
       <h2 className="text-3xl font-extrabold text-black leading-tight mb-4">
         What’s new in <br /> 𝒫𝓇𝑒𝒹𝒾𝒸𝓉𝑜𝒫𝓁𝒶𝓎?
@@ -176,7 +175,7 @@ const Home = () => {
       <p className="text-2xl">→</p>
     </div>
 
-    {/* Trust & Safety */}
+  
     <div className="break-inside-avoid bg-gray-900 text-white p-8 rounded-lg shadow-lg">
       <h3 className="font-bold text-2xl mb-3">𝒫𝓇𝑒𝒹𝒾𝒸𝓉𝑜𝒫𝓁𝒶𝓎 Trust & Safety</h3>
       <p className="text-sm mb-4">
@@ -202,7 +201,7 @@ const Home = () => {
       </p>
     </div>
 
-    {/* Exiting Trades */}
+    
     <div className="break-inside-avoid bg-gray-900 text-white p-8 rounded-lg shadow-lg">
       <h3 className="font-bold text-2xl mb-3">Exiting trades is your choice</h3>
       <p className="text-sm mb-4">
@@ -216,7 +215,7 @@ const Home = () => {
       />
     </div>
 
-    {/* Market Orders */}
+    
     <div className="break-inside-avoid bg-gray-900 text-white p-8 rounded-lg shadow-lg">
       <h3 className="font-bold text-2xl mb-3">Market Orders and Instant Exit</h3>
       <p className="text-sm mb-4">
@@ -230,7 +229,7 @@ const Home = () => {
       />
     </div>
 
-    {/* Prediction Power */}
+   
     <div className="break-inside-avoid bg-gray-900 text-white p-8 rounded-lg shadow-lg">
       <h3 className="font-bold text-2xl mb-3">The Power of Prediction Markets</h3>
       <p className="text-sm mb-4">
@@ -244,7 +243,7 @@ const Home = () => {
       />
     </div>
 
-    {/* Text Filler Card 1 */}
+   
     <div className="break-inside-avoid bg-white p-8 rounded-lg shadow-lg">
       <h3 className="text-2xl font-bold text-black mb-2">Your Game. Your Rules.</h3>
       <p className="text-sm text-gray-800">
@@ -252,7 +251,7 @@ const Home = () => {
       </p>
     </div>
 
-    {/* Text Filler Card 2 */}
+    
     <div className="break-inside-avoid bg-white p-8 rounded-lg shadow-lg">
       <h3 className="text-2xl font-bold text-black mb-2">Real. Simple. Profitable.</h3>
       <p className="text-sm text-gray-800">
@@ -271,7 +270,7 @@ const Home = () => {
 
 
 
-        {/* Filters */}
+      
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
           <div>
             <h2 className="text-2xl font-bold text-white mb-2">Trending Predictions</h2>
@@ -279,7 +278,7 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            {/* Category Filter */}
+          
             <div className="flex items-center space-x-2">
               <Filter className="h-5 w-5 text-gray-400" />
               <select
@@ -293,7 +292,7 @@ const Home = () => {
               </select>
             </div>
 
-            {/* Sort Filter */}
+          
             <div className="flex items-center space-x-2">
               <TrendingUp className="h-5 w-5 text-gray-400" />
               <select
@@ -309,7 +308,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Category Tabs */}
+        
         <div className="flex flex-wrap gap-3 mb-8">
           {categories.map(category => (
             <button
@@ -326,7 +325,7 @@ const Home = () => {
           ))}
         </div>
 
-        {/* Prediction Cards */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sortedPredictions.map(prediction => (
             <PredictionCard 
@@ -335,7 +334,7 @@ const Home = () => {
             />
           ))}
         </div>
-{/* Smart Choices Section */}
+
     <section className="px-6 max-w-7xl mx-auto py-20">
   <h3 className="text-4xl md:text-5xl font-extrabold max-w-4xl mx-auto text-center mb-16 text-gray-900 leading-snug">
     Smart choices, responsible play. <br /> <span className="text-purple-600">𝒫𝓇𝑒𝒹𝒾𝒸𝓉𝑜𝒫𝓁𝒶𝓎 puts you first.</span>
@@ -380,7 +379,7 @@ const Home = () => {
   </div>
 </section>
 
-       {/* Features */}
+      
 
 <div className="mt-16 bg-white border border-gray-200 rounded-2xl shadow-xl p-10">
   <h3 className="text-4xl font-extrabold text-center text-black mb-12">
@@ -415,22 +414,22 @@ const Home = () => {
 
       </div>
 
-      {/* Footer */}
+    
       <footer className="relative bg-gray-900 text-white overflow-hidden">
-  {/* Background Human-Themed Image */}
+
   <div className="absolute inset-0">
     <img
-      src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" // Replace with any human/community themed image
+      src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
       alt="Teamwork"
       className="w-full h-full object-cover opacity-20"
     />
 
   </div>
 
-  {/* Footer Content */}
+ 
   <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
     <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-      {/* Brand Section */}
+      
       <div>
         <Link to="/" className="flex items-center space-x-2">
                       <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-2 rounded-lg shadow-inner">
@@ -445,7 +444,7 @@ const Home = () => {
         </p>
       </div>
 
-      {/* Quick Links */}
+      
       <div>
         <h4 className="text-lg font-bold mb-3 text-white">Quick Links</h4>
         <ul className="space-y-2 text-gray-300 text-sm">
@@ -456,7 +455,7 @@ const Home = () => {
         </ul>
       </div>
 
-      {/* Support */}
+      
       <div>
         <h4 className="text-lg font-bold mb-3 text-white">Support</h4>
         <ul className="space-y-2 text-gray-300 text-sm">
@@ -466,7 +465,7 @@ const Home = () => {
         </ul>
       </div>
 
-      {/* Social Media */}
+     
       <div>
         <h4 className="text-lg font-bold mb-3 text-white">Follow Us</h4>
         <div className="flex space-x-5 mt-2">
@@ -495,7 +494,7 @@ const Home = () => {
       </div>
     </div>
 
-    {/* Copyright */}
+    
     <div className="mt-12 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
       &copy; {new Date().getFullYear()} PredictoPlay. All rights reserved.
     </div>
@@ -508,7 +507,7 @@ const Home = () => {
 );
 };
 
-// Reusable Stat Box
+
 const StatBox = ({ value, label, icon }) => (
   <div className="text-center flex flex-col items-center">
     <img src={icon} alt={label} class PIECE className="h-10 w-10 mb-2" />
@@ -517,7 +516,7 @@ const StatBox = ({ value, label, icon }) => (
   </div>
 );
 
-// Reusable Feature Card
+
 const Feature = ({ icon: Icon, title, desc, gradient, image }) => (
   <div className="text-center">
     <div className={`w-16 h-16 bg-gradient-to-r ${gradient} rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg`}>
